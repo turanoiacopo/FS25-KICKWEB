@@ -7,13 +7,30 @@
 </head>
 
 <style>
+    @font-face 
+    {
+    font-family: Agharti;
+    src: url('./resources/fonts/Agharti-BoldCondensed.ttf');
+    }
+
+    @font-face 
+    {
+    font-family: porschav3cond;
+    src: url('./resources/fonts/911porschav3cond.ttf');
+    }
+
+    body
+    {
+        margin: 0px;
+    }
+
     .parentcontainer
     {
         width: 100vw;
         height: 100vh;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 10fr;
         gap: 10px
     }
 
@@ -21,15 +38,41 @@
     {
         width: 100%;
         height: 100%;
-        grid-column: 1 / 6;
-        grid-row: 1 / 2;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        
+        background-color: rgb(251, 124, 124);
+    }
+
+    #header-title
+    {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
 
         text-align: center;
+        font-size: 3rem;
     }
 
     .content
     {
-        
+        width: 100%;
+        height: 100%;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+
+        background-color: rgb(147, 147, 255);
+    }
+
+    .content-grid
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+        height: 100%;
     }
 </style>
 
@@ -37,9 +80,12 @@
     <div class="parentcontainer">
 
         <div class="header">
-            IACOPO TURANO | FS25 - KICKWEB
+            <div id="header-title">IACOPO TURANO | FS25 KICKWEB</div>
         </div>
 
+        <div class="content">
+            <div class="content-grid"></div>
+        </div>
 
     </div>
 </body>
