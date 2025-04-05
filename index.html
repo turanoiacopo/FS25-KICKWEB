@@ -10,6 +10,50 @@
 </head>
 
 <style>
+    @media screen and (max-width: 768px) 
+    {
+        .parentcontainer 
+        {
+            grid-template-rows: auto auto;
+            height: auto;
+        }
+
+        .header 
+        {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
+
+        #header-title 
+        {
+            font-size: 1.8rem;
+            padding: 1rem;
+        }
+
+        .content-grid 
+        {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 30px;
+            padding: 1rem;
+            font-size: 1.2rem;
+        }
+
+        #sprint1-content,
+        #sprint2-content,
+        #about-content 
+        {
+            grid-column: 1 / -1 !important;
+            grid-row: auto;
+        }
+
+        .buttons 
+        {
+            font-size: 1rem;
+            height: 40px;
+        }
+    }
+
     body
     {
         margin: 0px;
