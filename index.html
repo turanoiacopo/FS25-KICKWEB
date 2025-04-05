@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Index - Iacopo Turano</title>
 </head>
 
 <style>
     @font-face 
     {
-        font-family: Agharti;
-        src: url('./resources/fonts/Agharti-BoldCondensed.ttf');
+        font-family: DIN;
+        src: url('.resources/fonts/DIN-REGULAR.OTF');
     }
 
     @font-face 
@@ -21,7 +21,7 @@
 
     body
     {
-        margin: 0px;
+        margin: 0px;;
     }
 
     .parentcontainer
@@ -31,7 +31,6 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 10fr;
-        gap: 10px
     }
 
     .header 
@@ -42,8 +41,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        
-        background-color: rgb(251, 124, 124);
+
+        background-color: rgb(19, 12, 13);
     }
 
     #header-title
@@ -52,7 +51,8 @@
         grid-row: 2 / 3;
 
         text-align: center;
-        font-size: 3rem;
+        font-size: 2rem;
+        color: white;
     }
 
     .content
@@ -61,22 +61,81 @@
         height: 100%;
         grid-column: 1 / 2;
         grid-row: 2 / 3;
+
+        background-color: rgb(19, 12, 13);
     }
 
     .content-grid
     {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto ;
         
-        gap: 10px;
-        margin-left: 10px;
-        margin-right: 10px;
+        gap: 50px;
 
         width: 100%;
         height: 100%;
+    }
 
-        background-color: rgb(147, 147, 255);
+    #sprint1-content
+    {
+        width: 100%;
+        height: 100%;
+
+        grid-column: 2 / 5;
+        grid-row: 1 / 2;
+
+        word-wrap: break-word;
+        color: white;
+    }
+
+    #sprint1-content > h1
+    {
+        color: rgb(158, 78, 111);
+    }
+
+    #sprint2-content
+    {
+        width: 100%;
+        height: 100%;
+
+        grid-column: 2 / 5;
+        grid-row: 2 / 3;
+
+        word-wrap: break-word;
+        color: white;
+    }
+
+    #sprint2-content > h1
+    {
+        color: rgb(243, 211, 7);
+    }
+
+    #about-content
+    {
+        width: 100%;
+        height: 100%;
+
+        grid-column: 2 / 5;
+        grid-row: 3 / 4;
+
+        word-wrap: break-word;
+        color: white;
+    }
+
+    #about-content > h1
+    {
+        color: rgb(105, 124, 185);
+    }
+
+    .link
+    {
+        color: yellowgreen;
+    }
+
+    .link:hover
+    {
+        color: rgb(111, 155, 23);
     }
 
     .buttons
@@ -86,29 +145,6 @@
 
         border: none;
         background-color: white;
-    }
-
-    #sprint1-content
-    {
-        width: 100%;
-        height: 100%;
-
-        grid-column: 2 / 5;
-        grid-row: 1 / 3;
-
-        background-color: bisque;
-        word-wrap: break-word;
-    }
-
-    #sprint2-content
-    {
-        width: 100%;
-        height: 100%;
-
-        grid-column: 2 / 5;
-        grid-row: 3 / 5;
-
-        background-color: bisque;
     }
 </style>
 
@@ -125,10 +161,10 @@
                     <h1>Sprint 1</h1>
                     <p>
                         The first part of the project (called Sprint 1) consisted in the recreation of an existing poster in a webpage. <br><br>
-                        As reference, I chose the <a href="https://www.mplus.org.hk/en/collection/objects/poster-nikon-sp-camera-201445/">Nikon SP Camera</a> poster designed by <a href="https://en.wikipedia.org/wiki/Yusaku_Kamekura">Kamekura Yusaku</a> in the year 1957, destined to advertise a new camera model from Nikon. <br><br>
+                        As reference, I chose the <a class="link" href="https://www.mplus.org.hk/en/collection/objects/poster-nikon-sp-camera-201445/">Nikon SP Camera</a> poster designed by <a class="link" href="https://en.wikipedia.org/wiki/Yusaku_Kamekura">Kamekura Yusaku</a> in the year 1957, destined to advertise a new camera model from Nikon. <br><br>
                         I was intrigued by the use of compressed and stretched letters and the scaled composition which creates an interesting rhythm. <br><br>
                         To replicate that rhythm, the size of the rows decreases following the Fibonacci sequence. I then placed the letters in different spaces of the grid to replicate the composition. <br><br>
-                        Using SVGs it was possible to recreate the stretching effect on two fonts I used (Agharti Bold and Porschav Condensed. <br><br>
+                        Using SVGs it was possible to recreate the stretching effect on two fonts I used (Agharti Bold and Porschav Condensed
                     </p>
                     <a href="./projects/sprint_1.html">
                         <button class="buttons">Sprint 1</button>
@@ -140,11 +176,19 @@
                     <p>
                         The second part of the project (called Sprint 2) consisted in the addition of animations and interactions to the page. <br><br>
                         Some elements from Sprint 1 were removed to make the animations less chaotic. The “SP” from the original design was change to “35”, in reference to the 35mm film format which I often use. <br><br>
-                        Using a script, when an element is pointed with the mouse, the grid size will change making the pointed element big and shrinking the others, recalling the effect of a zoom lens. The stretching and compressing effect of the letters is even more amplified. <br><br>
+                        Using a script, when an element is pointed with the mouse, the grid size will change making the pointed element big and shrinking the others, recalling the effect of a zoom lens. The stretching and compressing effect of the letters is even more amplified. 
                     </p>
                     <a href="./projects/sprint_2.html">
                         <button class="buttons">Sprint 2</button>
                     </a>
+                </div>
+
+                <div id="about-content">
+                    <h1>About</h1>
+                    <p>
+                        Iacopo Turano<br><br>
+                        HSLU Digital Ideation - Kickstart Webdevelopment FS25
+                    </p>
                 </div>
             </div>
         </div>
