@@ -4,24 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index - Iacopo Turano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
 <style>
-    @font-face 
-    {
-        font-family: DIN;
-        src: url('.resources/fonts/DIN-REGULAR.OTF');
-    }
-
-    @font-face 
-    {
-        font-family: porschav3cond;
-        src: url('./resources/fonts/911porschav3cond.ttf');
-    }
-
     body
     {
-        margin: 0px;;
+        margin: 0px;
+        overflow-x: hidden;
     }
 
     .parentcontainer
@@ -31,6 +23,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 10fr;
+        font-family: "Space Mono", monospace;
     }
 
     .header 
@@ -42,7 +35,7 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
 
-        background-color: rgb(19, 12, 13);
+        background-color: rgb(69, 57, 59);
     }
 
     #header-title
@@ -51,7 +44,7 @@
         grid-row: 2 / 3;
 
         text-align: center;
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: white;
     }
 
@@ -75,6 +68,9 @@
 
         width: 100%;
         height: 100%;
+
+        font-weight: 500;
+        font-size: 2rem;
     }
 
     #sprint1-content
@@ -130,21 +126,30 @@
 
     .link
     {
-        color: yellowgreen;
+        color: rgb(77, 158, 62);
     }
 
     .link:hover
     {
-        color: rgb(111, 155, 23);
+        color: rgb(60, 122, 63);
     }
 
     .buttons
     {
         width: 100%;
-        height: 10%;
+        height: 50px;
 
         border: none;
         background-color: white;
+        font-family: "Space Mono", monospace;
+        font-size: 1rem;
+        color: rgb(19, 12, 13);
+        background-color: white;
+    }
+
+    .buttons:hover
+    {
+        background-color: rgb(222, 220, 220);
     }
 </style>
 
@@ -164,7 +169,7 @@
                         As reference, I chose the <a class="link" href="https://www.mplus.org.hk/en/collection/objects/poster-nikon-sp-camera-201445/">Nikon SP Camera</a> poster designed by <a class="link" href="https://en.wikipedia.org/wiki/Yusaku_Kamekura">Kamekura Yusaku</a> in the year 1957, destined to advertise a new camera model from Nikon. <br><br>
                         I was intrigued by the use of compressed and stretched letters and the scaled composition which creates an interesting rhythm. <br><br>
                         To replicate that rhythm, the size of the rows decreases following the Fibonacci sequence. I then placed the letters in different spaces of the grid to replicate the composition. <br><br>
-                        Using SVGs it was possible to recreate the stretching effect on two fonts I used (Agharti Bold and Porschav Condensed
+                        Using SVGs it was possible to recreate the stretching effect on two fonts I used (Agharti Bold and Porschav Condensed).
                     </p>
                     <a href="./projects/sprint_1.html">
                         <button class="buttons">Sprint 1</button>
