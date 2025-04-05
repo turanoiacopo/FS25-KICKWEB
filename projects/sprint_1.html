@@ -7,19 +7,6 @@
 </head>
 
 <style>
-@media screen and (max-width: 768px){
-  body {
-    transform: rotate(90deg);
-    transform-origin: left top;
-    width: 100vh;
-    height: 100vw;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-}
-
 @font-face {
     font-family: Agharti;
     src: url('../resources/fonts/Agharti-BoldCondensed.ttf');
@@ -28,6 +15,25 @@
 @font-face {
     font-family: porschav3cond;
     src: url('../resources/fonts/911porschav3cond.ttf');
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    transform: rotate(90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .parentcontainer {
+    width: 100vh;
+    height: 100vw;
+  }
 }
 
 body
