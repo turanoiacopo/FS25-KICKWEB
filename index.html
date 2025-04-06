@@ -12,10 +12,24 @@
 <style>
     @media screen and (max-width: 768px) 
     {
+        html, body 
+        {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden;
+            background-color: rgb(19, 12, 13);
+        }
+
         .parentcontainer 
         {
             grid-template-rows: auto auto;
             height: auto;
+            width: 100%;
+            height: 100vh;
+            max-width: 100vw;
+            overflow-x: hidden;
         }
 
         .header 
@@ -62,8 +76,9 @@
 
     .parentcontainer
     {
-        width: 100vw;
+        width: 100%;
         height: 100vh;
+        max-width: 100vw;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 10fr;
